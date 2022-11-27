@@ -9,6 +9,19 @@ const Board=({checkResult,checkPlayer})=>{
     const [isValid,setValid] = useState(false)
     
 
+
+    const defaultColor = {
+        backgroundColor: "white"
+    }
+
+    const xColor = {
+        backgroundColor: "rgb(223, 71, 99)"
+    }
+
+    const oColor = {
+        backgroundColor: "rgb(41, 175, 82)"
+    }
+
     const onClickHandle=(id,value)=>{
        
         if(squares[id]!=null)
@@ -71,8 +84,13 @@ const Board=({checkResult,checkPlayer})=>{
 
    
 
-    const Square=(props)=>{
-        return <button className="button" onClick={()=>onClickHandle(props.id,props.value)} disabled={isValid}>{props.value}</button>
+    const Square=({id,value})=>{
+        return <button 
+        className="button" 
+        onClick={()=>onClickHandle(id,value)} 
+        disabled={isValid} 
+        style={value==null?defaultColor:value==="X"?xColor:oColor}
+        >{value}</button>
     }
 
     return(
