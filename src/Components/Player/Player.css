@@ -1,6 +1,8 @@
 .player{
-    display: block;
-    width: auto;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
     margin: .5rem;
     border: 2px solid black;
     border-radius: .3rem;
