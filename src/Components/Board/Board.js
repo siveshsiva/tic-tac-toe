@@ -6,7 +6,7 @@ import squares from "../../helpers/Squares"
 import Player from "../Player/Player"
 import Winner from "../Winner/Winner"
 
-const Board=()=>{
+const Board=(props)=>{
 
     const [sq,setSquares] = useState(squares)
     const [player,setPlayer] = useState("X")
@@ -28,6 +28,7 @@ const Board=()=>{
             return null
         })
     })
+
    }
 
 

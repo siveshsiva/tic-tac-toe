@@ -6,8 +6,8 @@ const Game=()=>{
 
     return(
         <div className="game">
-        <Title></Title>
-       <Board></Board>
+            <Title></Title>
+            <Board></Board>
        </div>
     )
 }
